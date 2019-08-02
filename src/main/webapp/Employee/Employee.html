@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>G-Mobile</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" ></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="Employee.css">
+	<script src="Employee.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-primary sticky-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">G-Mobile</a>
+			</div>
+			<ul class="nav navbar-nav navbar-dark navbar-right">
+				<li class="nav-item">
+					<a class="nav-link" onclick="logout()">LOG OUT</a>
+				</li>
+			</ul>
+			
+		</div>
+	</nav>
+	
+	<div class="container" style="padding-bottom:50px">
+		<h1 class="text-center">Welcome to G-Mobile Reimbursement </h1>
+		<div style="background-color:gainsboro">
+			<h1>Profile</h1>
+		</div>
+		<div id="employeeName"></div>
+		<div id="employeePhone"></div>
+		<div id="employeeEmail"></div>
+		<div>
+			<input type="tel" id="phonenumber" name="phonenumber" value="Phone Number" required>
+			<input type="email" id="email" name="email" value="Email" required>
+			<input type="button" onclick="updateProfile()" value="Update Profile">
+		</div>
+	</div>
+
+	<div class="container" style="padding-bottom:50px">
+		<div style="background-color:gainsboro">
+			<h1>View Submitted Request</h1>
+		</div>
+		<table class="table table-hover table-striped table-bordered" id="requestTable"></table>
+	</div>
+	
+	<div class="container" style="padding-bottom:50px">
+		<div>
+			<div style="background-color:gainsboro">
+				<h1>Create Request</h1>
+			</div>
+			<h3>Description</h3>
+			<input type="text" id="description" name="description" required>
+			<br>
+			<h3>Amount</h3>
+			<input type="number" id="amount" name="amount" min="0" max="100000">
+			<br>
+			<h3>Image</h3>
+			<input type="file" id="image" name="image" accept="image/*">
+			<br><br>
+			<button type="submit" onclick="convertImage()">Submit Request</button>
+		</div>
+	</div>
+	 
+	 <footer class="bg-primary" style="height:60px"></footer>
+	<!--  <button type="button" onclick="logout()">LOG OUT</button> -->
+</body>
+</html>

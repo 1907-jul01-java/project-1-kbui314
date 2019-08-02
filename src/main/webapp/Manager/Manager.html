@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>G-Mobile</title>
+<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script> -->
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" ></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="Manager.css">
+	<script src="Manager.js"></script>
+</head>
+<body>
+	<!-- <nav class="navbar navbar-dark bg-primary sticky-top">
+		<a class="navbar-brand" href="#">G-Mobile</a>
+		<ul class="navbar-right">
+			<a onclick="logout()">LOG OUT</a>
+		</ul>
+	</nav> -->
+	<nav class="navbar navbar-dark bg-primary sticky-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">G-Mobile</a>
+			</div>
+			<ul class="nav navbar-nav navbar-dark navbar-right">
+				<li class="nav-item">
+					<a class="nav-link" onclick="logout()">LOG OUT</a>
+				</li>
+			</ul>
+			
+		</div>
+	</nav>
+	
+	<div class="container" style="padding-bottom:50px">
+		<h1 class="text-center">Welcome to G-Mobile Reimbursement </h1>
+		<div id="managerName"></div>
+	</div>
+	<div class="container" style="padding-bottom:50px">
+		<div class="container">
+			<h1 style="background-color:gainsboro">Manage Requests</h1>
+			<table class="table table-hover table-striped table-bordered" id="requestTable"></table>
+		</div>
+		<div id=showImage></div>
+	</div>
+	
+	<div class="container" style="padding-bottom:50px">
+		<h1 style="background-color:gainsboro">View All Employees</h1>
+		<table class="table table-hover table-striped" id="employeeList"></table>
+	</div>
+ 	<!-- <button type="button" onclick="logout()">LOG OUT</button> -->
+ 	<footer class="bg-primary" style="height:60px"></footer>
+</body>
+</html>
